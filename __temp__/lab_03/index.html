@@ -10,14 +10,14 @@
         <meta name="author" content="Francisco Alfaro">
       
       
-        <link rel="canonical" href="https://github.com/fralfaro/MAT281_2023/_temp_/lab_10/">
+        <link rel="canonical" href="https://github.com/fralfaro/MAT281_2023/__temp__/lab_03/">
       
       <link rel="icon" href="../../images/usm.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
     
     
       
-        <title>MAT281 - Laboratorio N°10 - Home</title>
+        <title>MAT281 - Laboratorio N°03 - Home</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mat281-laboratorio-n10" class="md-skip">
+        <a href="#mat281-laboratorio-n03" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MAT281 - Laboratorio N°10
+              MAT281 - Laboratorio N°03
             
           </span>
         </div>
@@ -834,8 +834,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#i-problema-01" class="md-nav__link">
-    I.- Problema 01
+  <a href="#diccionario-de-datos" class="md-nav__link">
+    Diccionario de datos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuente-original-y-adaptacion" class="md-nav__link">
+    Fuente original y adaptación
   </a>
   
 </li>
@@ -1890,13 +1897,60 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><a href="https://colab.research.google.com/github/fralfaro/MAT281_2023/blob/main/docs/labs/lab_10.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
-<h1 id="mat281-laboratorio-n10">MAT281 - Laboratorio N&#176;10<a class="anchor-link" href="#mat281-laboratorio-n10">&#182;</a></h1><p><a id='p1'></a></p>
-<h2 id="i-problema-01">I.- Problema 01<a class="anchor-link" href="#i-problema-01">&#182;</a></h2><p>Lista de actos delictivos registrados por el Service de police de la Ville de Montréal (SPVM).</p>
-<p><img src="http://henriquecapriles.com/wp-content/uploads/2017/02/femina_detenida-1080x675.jpg" width="480" height="360" align="center"/></p>
-<p>El conjunto de datos en estudio <code>interventionscitoyendo.csv</code> corresponde a  todos los delitos entre 2015 y agosto de 2020en Montreal. Cada delito está asociado en grandes categorías, y hay información sobre la ubicación, el momento del día, etc.</p>
-<blockquote><p><strong>Nota</strong>: Para más información seguir el siguiente el <a href="https://donnees.montreal.ca/ville-de-montreal/actes-criminels">link</a>.</p>
-</blockquote>
+<p><a href="https://colab.research.google.com/github/fralfaro/MAT281_2023/blob/main/docs/labs/lab_03.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
+<h1 id="mat281-laboratorio-n03">MAT281 - Laboratorio N&#176;03<a class="anchor-link" href="#mat281-laboratorio-n03">&#182;</a></h1>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Esta semana revisaremos datos del <strong>Índice de Libertad de Prensa</strong> que confecciona cada año la asociación de Reporteros Sin Fronteras.</p>
+<h2 id="diccionario-de-datos">Diccionario de datos<a class="anchor-link" href="#diccionario-de-datos">&#182;</a></h2><table>
+<thead><tr>
+<th style="text-align:left">Variable</th>
+<th style="text-align:left">Clase</th>
+<th style="text-align:left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">codigo_iso</td>
+<td style="text-align:left">caracter</td>
+<td style="text-align:left">Código ISO del país</td>
+</tr>
+<tr>
+<td style="text-align:left">pais</td>
+<td style="text-align:left">caracter</td>
+<td style="text-align:left">País</td>
+</tr>
+<tr>
+<td style="text-align:left">anio</td>
+<td style="text-align:left">entero</td>
+<td style="text-align:left">Año del resultado</td>
+</tr>
+<tr>
+<td style="text-align:left">indice</td>
+<td style="text-align:left">entero</td>
+<td style="text-align:left">Puntaje Índice Libertad de Prensa (menor puntaje = mayor libertad de prensa)</td>
+</tr>
+<tr>
+<td style="text-align:left">ranking</td>
+<td style="text-align:left">entero</td>
+<td style="text-align:left">Ranking Libertad de Prensa</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fuente-original-y-adaptacion">Fuente original y adaptaci&#243;n<a class="anchor-link" href="#fuente-original-y-adaptacion">&#182;</a></h2><p>Los datos fueron extraídos de <a href="https://tcdata360.worldbank.org/indicators/h3f86901f?country=BRA&amp;indicator=32416&amp;viz=line_chart&amp;years=2001,2019">The World Bank</a>. La fuente original es <a href="https://www.rsf-es.org/">Reporteros sin Fronteras</a>.</p>
+<p>Por otro lado, estos archivos han sido modificado intencionalmente para ocupar todo lo aprendido en clases. A continuación, una breve descripción de cada uno de los data frames:</p>
+<ul>
+<li><strong>libertad_prensa_codigo.csv</strong>: contiene la información codigo_iso/pais. Existe un código que tiene dos valores.</li>
+<li><strong>libertad_prensa_anio.csv</strong>: contiene la información pais/anio/indice/ranking. Los nombres de las columnas estan en mayúscula.</li>
+</ul>
 
 </div>
 </div>
@@ -1922,39 +1976,17 @@ Licensed under the Apache License, Version 2.0.
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># librerias </span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span> 
-<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
-<span class="kn">from</span> <span class="nn">prophet</span> <span class="kn">import</span> <span class="n">Prophet</span>
-<span class="kn">from</span> <span class="nn">statsmodels.tsa.statespace.sarimax</span> <span class="kn">import</span> <span class="n">SARIMAX</span>
 
-<span class="c1"># graficos incrustados</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s1">&#39;whitegrid&#39;</span><span class="p">)</span>
-<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
-
-<span class="c1"># parametros esteticos de seaborn</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">set_palette</span><span class="p">(</span><span class="s2">&quot;deep&quot;</span><span class="p">,</span> <span class="n">desat</span><span class="o">=</span><span class="mf">.6</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">)})</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">listdir</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">isfile</span><span class="p">,</span> <span class="n">join</span>
 </pre></div>
-<div id="cell-1" class="clipboard-copy-txt"># librerias 
+<div id="cell-1" class="clipboard-copy-txt">import numpy as np 
 import pandas as pd
-import numpy as np 
-import matplotlib.pyplot as plt 
-import seaborn as sns 
-import statsmodels.api as sm
-from prophet import Prophet
-from statsmodels.tsa.statespace.sarimax import SARIMAX
 
-# graficos incrustados
-sns.set_style('whitegrid')
-%matplotlib inline
-
-# parametros esteticos de seaborn
-sns.set_palette("deep", desat=.6)
-sns.set_context(rc={"figure.figsize": (12, 4)})</div>
+from os import listdir
+from os.path import isfile, join</div>
     
         </div>
     </div>
@@ -1984,53 +2016,15 @@ sns.set_context(rc={"figure.figsize": (12, 4)})</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span><span class="p">,</span> <span class="n">mean_squared_error</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;data/&quot;</span>
 
-<span class="k">def</span> <span class="nf">mean_absolute_percentage_error</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">((</span><span class="n">y_true</span> <span class="o">-</span> <span class="n">y_pred</span><span class="p">)</span> <span class="o">/</span> <span class="n">y_true</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
-
-<span class="k">def</span> <span class="nf">regression_metrics</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Aplicar las distintas métricas definidas</span>
-<span class="sd">    :param df: DataFrame con las columnas: [&#39;y&#39;, &#39;yhat&#39;]</span>
-<span class="sd">    :return: DataFrame con las métricas especificadas</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">df_result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
-
-    <span class="n">y_true</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span>
-    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;yhat&#39;</span><span class="p">]</span>
-
-    <span class="n">df_result</span><span class="p">[</span><span class="s1">&#39;mae&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span> <span class="mi">4</span><span class="p">)]</span>
-    <span class="n">df_result</span><span class="p">[</span><span class="s1">&#39;mse&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span> <span class="mi">4</span><span class="p">)]</span>
-    <span class="n">df_result</span><span class="p">[</span><span class="s1">&#39;rmse&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)),</span> <span class="mi">4</span><span class="p">)]</span>
-    <span class="n">df_result</span><span class="p">[</span><span class="s1">&#39;mape&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">mean_absolute_percentage_error</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span> <span class="mi">4</span><span class="p">)]</span>
-    <span class="n">df_result</span><span class="p">[</span><span class="s1">&#39;smape&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">mean_absolute_percentage_error</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">mean_absolute_percentage_error</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span> <span class="o">+</span> <span class="mi">100</span><span class="p">),</span> <span class="mi">4</span><span class="p">)]</span>
-
-    <span class="k">return</span> <span class="n">df_result</span>
+<span class="n">archivos_anio</span> <span class="o">=</span> <span class="p">[</span><span class="n">path</span> <span class="o">+</span> <span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">if</span> <span class="s1">&#39;libertad_prensa_codigo&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">f</span> <span class="p">]</span> 
+<span class="n">df_codigos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;libertad_prensa_codigo.csv&#39;</span><span class="p">)</span>
 </pre></div>
-<div id="cell-2" class="clipboard-copy-txt">from sklearn.metrics import mean_absolute_error, mean_squared_error
+<div id="cell-2" class="clipboard-copy-txt">path = "data/"
 
-def mean_absolute_percentage_error(y_true, y_pred):
-    return np.mean(np.abs((y_true - y_pred) / y_true)) * 100
-
-def regression_metrics(df):
-    """
-    Aplicar las distintas métricas definidas
-    :param df: DataFrame con las columnas: ['y', 'yhat']
-    :return: DataFrame con las métricas especificadas
-    """
-    df_result = pd.DataFrame()
-
-    y_true = df['y']
-    y_pred = df['yhat']
-
-    df_result['mae'] = [round(mean_absolute_error(y_true, y_pred), 4)]
-    df_result['mse'] = [round(mean_squared_error(y_true, y_pred), 4)]
-    df_result['rmse'] = [round(np.sqrt(mean_squared_error(y_true, y_pred)), 4)]
-    df_result['mape'] = [round(mean_absolute_percentage_error(y_true, y_pred), 4)]
-    df_result['smape'] = [round(2 * mean_absolute_percentage_error(y_true, y_pred) / (mean_absolute_percentage_error(y_true, y_pred) + 100), 4)]
-
-    return df_result</div>
+archivos_anio = [path + f for f in listdir(path) if 'libertad_prensa_codigo' not in f ] 
+df_codigos = pd.read_csv(path + 'libertad_prensa_codigo.csv')</div>
     
         </div>
     </div>
@@ -2038,6 +2032,29 @@ def regression_metrics(df):
 </div>
 </div>
 
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>El objetivo es tratar de obtener la mayor información posible de este conjunto de datos. Para cumplir este objetivo debe resolver las siguientes problemáticas:</p>
+<ol>
+<li><p>Lo primero será juntar toda la información en un <em>solo archivo</em>, para ello necesitamos seguir los siguientes pasos:</p>
+<ul>
+<li>a) Crear el archivo <strong>df_anio</strong>, que contenga la información de <strong>libertad_prensa_anio.csv</strong> para cada año. Luego, normalice el nombre de las columnas a minúscula.</li>
+<li>b) Encuentre y elimine el dato que esta duplicado en el archivo <strong>df_codigo</strong>.</li>
+<li>c) Crear el archivo <strong>df</strong> que junte la información del archivo <strong>df_anio</strong> con <strong>df_codigo</strong> por la columna _codigo<em>iso</em>.</li>
+</ul>
+</li>
+</ol>
+<blockquote><p><strong>Hint</strong>: Para juntar por <em>anio</em> ocupe la función <strong>pd.concat</strong>. Para juntar información por columna ocupe <strong>pd.merge</strong>.</p>
+</blockquote>
+
+</div>
+</div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -2060,33 +2077,9 @@ def regression_metrics(df):
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># read data</span>
-
-<span class="n">validate_categorie</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="s1">&#39;Introduction&#39;</span><span class="p">,</span> <span class="s1">&#39;Méfait&#39;</span><span class="p">,</span><span class="s1">&#39;Vol dans / sur véhicule à moteur&#39;</span><span class="p">,</span> <span class="s1">&#39;Vol de véhicule à moteur&#39;</span><span class="p">,</span>
-<span class="p">]</span>
-
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/fralfaro/MAT281_2022/main/labs/lab_10/data/interventionscitoyendo.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;latin-1&#39;</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;categorie&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">validate_categorie</span><span class="p">)]</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">&#39;categorie&#39;</span><span class="p">,</span><span class="s1">&#39;date&#39;</span><span class="p">])</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># FIXME</span>
 </pre></div>
-<div id="cell-3" class="clipboard-copy-txt"># read data
-
-validate_categorie = [
-  'Introduction', 'Méfait','Vol dans / sur véhicule à moteur', 'Vol de véhicule à moteur',
-]
-
-df = pd.read_csv("https://raw.githubusercontent.com/fralfaro/MAT281_2022/main/labs/lab_10/data/interventionscitoyendo.csv", sep=",", encoding='latin-1')
-df.columns = df.columns.str.lower()
-df['date'] = pd.to_datetime(df['date'], format='%Y-%m-%d')
-
-df = df.loc[lambda x: x['categorie'].isin(validate_categorie)]
-df = df.sort_values(['categorie','date'])
-df.head()</div>
+<div id="cell-3" class="clipboard-copy-txt"># FIXME</div>
     
         </div>
     </div>
@@ -2102,7 +2095,16 @@ df.head()</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Como tenemos muchos datos por categoría a nivel de día, agruparemos a nivel de <strong>semanas</strong> y separaremos cada serie temporal.</p>
+<ol>
+<li>Encontrar:<ul>
+<li>¿Cuál es el número de observaciones en el conjunto de datos?   </li>
+<li>¿Cuál es el número de columnas en el conjunto de datos?   </li>
+<li>Imprime el nombre de todas las columnas  </li>
+<li>¿Cuál es el tipo de datos de cada columna? </li>
+<li>Describir el conjunto de datos (<strong>hint</strong>: .describe())</li>
+</ul>
+</li>
+</ol>
 
 </div>
 </div>
@@ -2128,17 +2130,9 @@ df.head()</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">,</span><span class="s1">&#39;pdq&#39;</span><span class="p">]</span>
-<span class="n">y_s1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">categorie</span> <span class="o">==</span> <span class="n">validate_categorie</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">][</span><span class="n">cols</span><span class="p">]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;W&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">y_s2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">categorie</span> <span class="o">==</span> <span class="n">validate_categorie</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">][</span><span class="n">cols</span><span class="p">]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;W&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">y_s3</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">categorie</span> <span class="o">==</span> <span class="n">validate_categorie</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">][</span><span class="n">cols</span><span class="p">]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;W&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">y_s4</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">categorie</span> <span class="o">==</span> <span class="n">validate_categorie</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="p">][</span><span class="n">cols</span><span class="p">]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;W&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># FIXME</span>
 </pre></div>
-<div id="cell-4" class="clipboard-copy-txt">cols = ['date','pdq']
-y_s1 = df.loc[lambda x: x.categorie == validate_categorie[0] ][cols].set_index('date').resample('W').mean()
-y_s2 = df.loc[lambda x: x.categorie == validate_categorie[1] ][cols].set_index('date').resample('W').mean()
-y_s3 = df.loc[lambda x: x.categorie == validate_categorie[2] ][cols].set_index('date').resample('W').mean()
-y_s4 = df.loc[lambda x: x.categorie == validate_categorie[3] ][cols].set_index('date').resample('W').mean()</div>
+<div id="cell-4" class="clipboard-copy-txt"># FIXME</div>
     
         </div>
     </div>
@@ -2154,9 +2148,8 @@ y_s4 = df.loc[lambda x: x.categorie == validate_categorie[3] ][cols].set_index('
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>El objetivo de este laboratorio es poder realizar un análisis completo del conjunto de datos en estudio, para eso debe responder las siguientes preguntas:</p>
 <ol>
-<li>Realizar un gráfico para cada serie temporal $y\_{si}, i =1,2,3,4$.</li>
+<li>Desarrolle una función <code>resumen_df(df)</code> para encontrar el total de elementos distintos y vacíos por columnas.</li>
 </ol>
 
 </div>
@@ -2183,9 +2176,35 @@ y_s4 = df.loc[lambda x: x.categorie == validate_categorie[3] ][cols].set_index('
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># FIXME</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># respuesta</span>
+
+<span class="k">def</span> <span class="nf">resumen_df</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    funcion resumen con elementos distintos y vacios</span>
+<span class="sd">    por columnas</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">nombres</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+    
+    <span class="n">result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;nombres&#39;</span><span class="p">:</span> <span class="n">nombres</span><span class="p">})</span>
+    <span class="n">result</span><span class="p">[</span><span class="s1">&#39;elementos_distintos&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">result</span><span class="p">[</span><span class="s1">&#39;elementos_vacios&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">return</span> <span class="n">result</span>
 </pre></div>
-<div id="cell-5" class="clipboard-copy-txt"># FIXME</div>
+<div id="cell-5" class="clipboard-copy-txt"># respuesta
+
+def resumen_df(df):
+    """
+    funcion resumen con elementos distintos y vacios
+    por columnas
+    """
+    nombres = df.columns
+    
+    result = pd.DataFrame({'nombres': nombres})
+    result['elementos_distintos'] = 0
+    result['elementos_vacios'] = 0
+    
+    return result</div>
     
         </div>
     </div>
@@ -2193,27 +2212,6 @@ y_s4 = df.loc[lambda x: x.categorie == validate_categorie[3] ][cols].set_index('
 </div>
 </div>
 
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ol>
-<li>Escoger alguna serie temporal $y\_{si}, i =1,2,3,4$. Luego:</li>
-</ol>
-<ul>
-<li>Realizar un análisis exploratorio de la serie temporal escogida</li>
-<li>Aplicar el modelo de pronóstico $SARIMA(p,d,q)x(P,D,Q,S)$, probando varias configuraciones de los hiperparámetros. Encuentre la mejor configuración. Concluya.</li>
-<li>Para el mejor modelo encontrado, verificar si el residuo corresponde a un ruido blanco.</li>
-</ul>
-<blockquote><p><strong>Hint</strong>: Tome como <code>target_date</code> =  '2021-01-01'. Recuerde considerar que su columna de valores se llama <code>pdq</code>.</p>
-</blockquote>
-
-</div>
-</div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -2236,119 +2234,11 @@ y_s4 = df.loc[lambda x: x.categorie == validate_categorie[3] ][cols].set_index('
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Creando la clase SarimaModels</span>
-<span class="k">class</span> <span class="nc">SarimaModels</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">params</span> <span class="o">=</span> <span class="n">params</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">name_model</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;SARIMA_</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">X</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
-
-    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">test_train_model</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">date</span><span class="p">):</span>
-        <span class="n">mask_ds</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">index</span> <span class="o">&lt;</span> <span class="n">date</span>
-        <span class="n">y_train</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">mask_ds</span><span class="p">]</span>
-        <span class="n">y_test</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="o">~</span><span class="n">mask_ds</span><span class="p">]</span>
-        <span class="k">return</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span>
-
-    <span class="k">def</span> <span class="nf">fit_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">date</span><span class="p">):</span>
-        <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_train_model</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">date</span><span class="p">)</span>
-        <span class="n">model</span> <span class="o">=</span> <span class="n">SARIMAX</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span>
-                        <span class="n">order</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-                        <span class="n">seasonal_order</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
-                        <span class="n">enforce_stationarity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-                        <span class="n">enforce_invertibility</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-        <span class="n">model_fit</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">disp</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">model_fit</span>
-
-    <span class="k">def</span> <span class="nf">df_testing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">date</span><span class="p">):</span>
-        <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_train_model</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">date</span><span class="p">)</span>
-        <span class="n">model</span> <span class="o">=</span> <span class="n">SARIMAX</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span>
-                        <span class="n">order</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-                        <span class="n">seasonal_order</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
-                        <span class="n">enforce_stationarity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-                        <span class="n">enforce_invertibility</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-        <span class="n">model_fit</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">disp</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-        <span class="n">start_index</span> <span class="o">=</span> <span class="n">y_test</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
-        <span class="n">end_index</span> <span class="o">=</span> <span class="n">y_test</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-        <span class="n">preds</span> <span class="o">=</span> <span class="n">model_fit</span><span class="o">.</span><span class="n">get_prediction</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">start_index</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">end_index</span><span class="p">,</span> <span class="n">dynamic</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-        <span class="n">df_temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-            <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="n">y_test</span><span class="p">[</span><span class="s1">&#39;pdq&#39;</span><span class="p">],</span>
-            <span class="s1">&#39;yhat&#39;</span><span class="p">:</span> <span class="n">preds</span><span class="o">.</span><span class="n">predicted_mean</span>
-        <span class="p">})</span>
-        <span class="k">return</span> <span class="n">df_temp</span>
-
-    <span class="k">def</span> <span class="nf">metrics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">date</span><span class="p">):</span>
-        <span class="n">df_temp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df_testing</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">date</span><span class="p">)</span>
-        <span class="n">df_metrics</span> <span class="o">=</span> <span class="n">regression_metrics</span><span class="p">(</span><span class="n">df_temp</span><span class="p">)</span>
-        <span class="n">df_metrics</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name_model</span>
-        <span class="k">return</span> <span class="n">df_metrics</span>
-
-<span class="c1"># Definir parámetros</span>
-<span class="kn">import</span> <span class="nn">itertools</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">d</span> <span class="o">=</span> <span class="n">q</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">pdq</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">q</span><span class="p">))</span>
-<span class="n">seasonal_pdq</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="mi">12</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">q</span><span class="p">))]</span>
-<span class="n">params</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">pdq</span><span class="p">,</span> <span class="n">seasonal_pdq</span><span class="p">))</span>
-<span class="n">target_date</span> <span class="o">=</span> <span class="s1">&#39;2021-01-01&#39;</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># retornar </span>
+<span class="n">resumen_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
-<div id="cell-6" class="clipboard-copy-txt"># Creando la clase SarimaModels
-class SarimaModels:
-    def __init__(self, params):
-        self.params = params
-
-    @property
-    def name_model(self):
-        return f"SARIMA_{self.params[0]}X{self.params[1]}".replace(' ', '')
-
-    @staticmethod
-    def test_train_model(y, date):
-        mask_ds = y.index < date
-        y_train = y[mask_ds]
-        y_test = y[~mask_ds]
-        return y_train, y_test
-
-    def fit_model(self, y, date):
-        y_train, y_test = self.test_train_model(y, date)
-        model = SARIMAX(y_train,
-                        order=self.params[0],
-                        seasonal_order=self.params[1],
-                        enforce_stationarity=False,
-                        enforce_invertibility=False)
-        model_fit = model.fit(disp=0)
-        return model_fit
-
-    def df_testing(self, y, date):
-        y_train, y_test = self.test_train_model(y, date)
-        model = SARIMAX(y_train,
-                        order=self.params[0],
-                        seasonal_order=self.params[1],
-                        enforce_stationarity=False,
-                        enforce_invertibility=False)
-        model_fit = model.fit(disp=0)
-        start_index = y_test.index.min()
-        end_index = y_test.index.max()
-        preds = model_fit.get_prediction(start=start_index, end=end_index, dynamic=False)
-        df_temp = pd.DataFrame({
-            'y': y_test['pdq'],
-            'yhat': preds.predicted_mean
-        })
-        return df_temp
-
-    def metrics(self, y, date):
-        df_temp = self.df_testing(y, date)
-        df_metrics = regression_metrics(df_temp)
-        df_metrics['model'] = self.name_model
-        return df_metrics
-
-# Definir parámetros
-import itertools
-p = d = q = range(0, 2)
-pdq = list(itertools.product(p, d, q))
-seasonal_pdq = [(x[0], x[1], x[2], 12) for x in list(itertools.product(p, d, q))]
-params = list(itertools.product(pdq, seasonal_pdq))
-target_date = '2021-01-01'</div>
+<div id="cell-6" class="clipboard-copy-txt"># retornar 
+resumen_df(df)</div>
     
         </div>
     </div>
@@ -2356,6 +2246,25 @@ target_date = '2021-01-01'</div>
 </div>
 </div>
 
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ol>
+<li><p>Para los paises latinoamericano, encuentre por año  el país con mayor y menor <code>indice</code>.</p>
+<ul>
+<li>a) Mediante un ciclo <em>for</em>.</li>
+<li>b) Mediante un  <em>groupby</em>.</li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -2378,9 +2287,23 @@ target_date = '2021-01-01'</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># FIXME</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># respuesta</span>
+
+<span class="n">america</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ARG&#39;</span><span class="p">,</span> <span class="s1">&#39;ATG&#39;</span><span class="p">,</span> <span class="s1">&#39;BLZ&#39;</span><span class="p">,</span> <span class="s1">&#39;BOL&#39;</span><span class="p">,</span> <span class="s1">&#39;BRA&#39;</span><span class="p">,</span> <span class="s1">&#39;CAN&#39;</span><span class="p">,</span> <span class="s1">&#39;CHL&#39;</span><span class="p">,</span> <span class="s1">&#39;COL&#39;</span><span class="p">,</span> <span class="s1">&#39;CRI&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;CUB&#39;</span><span class="p">,</span> <span class="s1">&#39;DOM&#39;</span><span class="p">,</span> <span class="s1">&#39;ECU&#39;</span><span class="p">,</span> <span class="s1">&#39;GRD&#39;</span><span class="p">,</span> <span class="s1">&#39;GTM&#39;</span><span class="p">,</span> <span class="s1">&#39;GUY&#39;</span><span class="p">,</span> <span class="s1">&#39;HND&#39;</span><span class="p">,</span> <span class="s1">&#39;HTI&#39;</span><span class="p">,</span> <span class="s1">&#39;JAM&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;MEX&#39;</span><span class="p">,</span> <span class="s1">&#39;NIC&#39;</span><span class="p">,</span> <span class="s1">&#39;PAN&#39;</span><span class="p">,</span> <span class="s1">&#39;PER&#39;</span><span class="p">,</span> <span class="s1">&#39;PRY&#39;</span><span class="p">,</span> <span class="s1">&#39;SLV&#39;</span><span class="p">,</span> <span class="s1">&#39;SUR&#39;</span><span class="p">,</span> <span class="s1">&#39;TTO&#39;</span><span class="p">,</span> <span class="s1">&#39;URY&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;VEN&#39;</span><span class="p">]</span>
+
+<span class="n">df_america</span> <span class="o">=</span> <span class="c1"># FIX ME</span>
 </pre></div>
-<div id="cell-7" class="clipboard-copy-txt"># FIXME</div>
+<div id="cell-7" class="clipboard-copy-txt"># respuesta
+
+america = ['ARG', 'ATG', 'BLZ', 'BOL', 'BRA', 'CAN', 'CHL', 'COL', 'CRI',
+       'CUB', 'DOM', 'ECU', 'GRD', 'GTM', 'GUY', 'HND', 'HTI', 'JAM',
+       'MEX', 'NIC', 'PAN', 'PER', 'PRY', 'SLV', 'SUR', 'TTO', 'URY',
+       'USA', 'VEN']
+
+df_america = # FIX ME</div>
     
         </div>
     </div>
@@ -2397,8 +2320,12 @@ target_date = '2021-01-01'</div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
-<li>Resuelva el ejercicio anterior utilizando la librería de <code>Prophet</code>.</li>
+<li>Para cada <em>país</em>, muestre el <em>indice</em> máximo que alcanzo por <em>anio</em>. Para los datos nulos, rellene con el valor <strong>0</strong>.</li>
 </ol>
+<p><strong>Ejemplo</strong>:</p>
+<p><img src="https://drive.google.com/uc?export=view&id=1ob0qch1dsOjDOUuZXnCY0HU_3XPp19gV" width = "700" align="center"/></p>
+<blockquote><p><strong>Hint</strong>: Utilice la función <strong>pd.pivot_table</strong>.</p>
+</blockquote>
 
 </div>
 </div>
@@ -2424,9 +2351,9 @@ target_date = '2021-01-01'</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># FIXME</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># FIX ME</span>
 </pre></div>
-<div id="cell-8" class="clipboard-copy-txt"># FIXME</div>
+<div id="cell-8" class="clipboard-copy-txt"># FIX ME</div>
     
         </div>
     </div>
