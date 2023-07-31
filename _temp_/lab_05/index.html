@@ -10,14 +10,14 @@
         <meta name="author" content="Francisco Alfaro">
       
       
-        <link rel="canonical" href="https://github.com/fralfaro/MAT281_2023/labs/lab_04/">
+        <link rel="canonical" href="https://github.com/fralfaro/MAT281_2023/_temp_/lab_05/">
       
       <link rel="icon" href="../../images/usm.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
     
     
       
-        <title>MAT281 - Laboratorio N°04 - Home</title>
+        <title>MAT281 - Laboratorio N°05 - Home</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mat281-laboratorio-n04" class="md-skip">
+        <a href="#mat281-laboratorio-n05" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MAT281 - Laboratorio N°04
+              MAT281 - Laboratorio N°05
             
           </span>
         </div>
@@ -837,6 +837,19 @@
   <a href="#problema-01" class="md-nav__link">
     Problema 01
   </a>
+  
+    <nav class="md-nav" aria-label="Problema 01">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bases-del-experimento" class="md-nav__link">
+    Bases del experimento
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1890,8 +1903,8 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><a href="https://colab.research.google.com/github/fralfaro/MAT281_2023/blob/main/docs/labs/lab_04.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
-<h1 id="mat281-laboratorio-n04">MAT281 - Laboratorio N&#176;04<a class="anchor-link" href="#mat281-laboratorio-n04">&#182;</a></h1>
+<p><a href="https://colab.research.google.com/github/fralfaro/MAT281_2023/blob/main/docs/labs/lab_05.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
+<h1 id="mat281-laboratorio-n05">MAT281 - Laboratorio N&#176;05<a class="anchor-link" href="#mat281-laboratorio-n05">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -1902,8 +1915,19 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="problema-01">Problema 01<a class="anchor-link" href="#problema-01">&#182;</a></h2><p><img src="https://drive.google.com/uc?export=view&id=1LkStfZqwS8AOm_xja6KDWWQMQV2ijrDu" width = "300" align="center"/></p>
-<p>EL conjunto de datos se denomina <code>company_sales_data.csv</code>, el cual contiene información tal como: número del mes, unidades, precio, etc.</p>
+<h2 id="problema-01">Problema 01<a class="anchor-link" href="#problema-01">&#182;</a></h2><p><img src="https://drive.google.com/uc?export=view&id=1Ha4ZjgvrlWHQ5vV_VydBkxiFXdgDn8TT" width = "200" align="center"/></p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>El <strong>Iris dataset</strong> es un conjunto de datos que contine una  muestras de tres especies de Iris (Iris setosa, Iris virginica e Iris versicolor). Se midió cuatro rasgos de cada muestra: el largo y ancho del sépalo y pétalo, en centímetros.</p>
 <p>Lo primero es cargar el conjunto de datos y ver las primeras filas que lo componen:</p>
 
 </div>
@@ -1930,17 +1954,33 @@ Licensed under the Apache License, Version 2.0.
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># librerias</span>
+ 
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span> 
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>  <span class="c1"># Ver más columnas de los dataframes</span>
 
-<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">)})</span>
+
+<span class="c1"># Ver gráficos de matplotlib en jupyter notebook/lab</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
 </pre></div>
-<div id="cell-1" class="clipboard-copy-txt">import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
+<div id="cell-1" class="clipboard-copy-txt"># librerias
+ 
+import os
+import numpy as np
+import pandas as pd
 
-sns.set(rc={'figure.figsize':(10,8)})</div>
+import matplotlib.pyplot as plt
+import seaborn as sns 
+pd.set_option('display.max_columns', 500)  # Ver más columnas de los dataframes
+
+
+# Ver gráficos de matplotlib en jupyter notebook/lab
+%matplotlib inline</div>
     
         </div>
     </div>
@@ -1971,12 +2011,16 @@ sns.set(rc={'figure.figsize':(10,8)})</div>
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># cargar datos</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/fralfaro/MAT281_2022/main/labs/lab_04/data/company_sales_data.csv&quot;</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/fralfaro/MAT281_2022/main/labs/lab_05/data/iris_contaminados.csv&quot;</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sepal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;sepal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;species&#39;</span><span class="p">]</span>
+
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 <div id="cell-2" class="clipboard-copy-txt"># cargar datos
-df = pd.read_csv("https://raw.githubusercontent.com/fralfaro/MAT281_2022/main/labs/lab_04/data/company_sales_data.csv")
-df.head()</div>
+data = pd.read_csv("https://raw.githubusercontent.com/fralfaro/MAT281_2022/main/labs/lab_05/data/iris_contaminados.csv")
+data.columns = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'species']
+
+data.head() </div>
     
         </div>
     </div>
@@ -1992,8 +2036,51 @@ df.head()</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>El objetivo es tratar de obtener la mayor información posible de este conjunto de datos. Para cumplir este objetivo debe resolver las siguientes problemáticas:</p>
-<p><strong>Observación.-</strong> Puedes ocupar las librerías de Matplolib o Seaborn.</p>
+<h3 id="bases-del-experimento">Bases del experimento<a class="anchor-link" href="#bases-del-experimento">&#182;</a></h3><p>Lo primero es identificar las variables que influyen en el estudio y la naturaleza de esta.</p>
+<ul>
+<li><strong>species</strong>: <ul>
+<li>Descripción: Nombre de la especie de Iris. </li>
+<li>Tipo de dato: <em>string</em></li>
+<li>Limitantes: solo existen tres tipos (setosa, virginia y versicolor).</li>
+</ul>
+</li>
+<li><strong>sepalLength</strong>: <ul>
+<li>Descripción: largo del sépalo. </li>
+<li>Tipo de dato: <em>float</em>. </li>
+<li>Limitantes: los valores se encuentran entre 4.0 y 7.0 cm.</li>
+</ul>
+</li>
+<li><strong>sepalWidth</strong>: <ul>
+<li>Descripción: ancho del sépalo. </li>
+<li>Tipo de dato: <em>float</em>. </li>
+<li>Limitantes: los valores se encuentran entre 2.0 y 4.5 cm.</li>
+</ul>
+</li>
+<li><strong>petalLength</strong>: <ul>
+<li>Descripción: largo del pétalo. </li>
+<li>Tipo de dato: <em>float</em>. </li>
+<li>Limitantes: los valores se encuentran entre 1.0 y 7.0 cm.</li>
+</ul>
+</li>
+<li><strong>petalWidth</strong>: <ul>
+<li>Descripción: ancho del pépalo. </li>
+<li>Tipo de dato: <em>float</em>. </li>
+<li>Limitantes: los valores se encuentran entre 0.1 y 2.5 cm.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Su objetivo es realizar un correcto <strong>E.D.A.</strong>, para esto debe seguir las siguientes intrucciones:</p>
 
 </div>
 </div>
@@ -2006,7 +2093,7 @@ df.head()</div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
-<li>Lea el "total_profit" de todos los meses, muéstrelo usando un gráfico lineal y un gráfico de dispersión.</li>
+<li>Realizar un conteo de elementos de la columna <strong>species</strong> y corregir según su criterio. Reemplace por "default" los valores <code>nan</code>.</li>
 </ol>
 
 </div>
@@ -2052,7 +2139,7 @@ df.head()</div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
-<li>Lea todos los datos de ventas de productos y muéstrelos utilizando un gráfico multilínea.</li>
+<li>Realizar un gráfico de box-plot sobre el largo y ancho de los petalos y sépalos. Reemplace por <strong>0</strong> los valores nan.</li>
 </ol>
 
 </div>
@@ -2098,7 +2185,7 @@ df.head()</div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
-<li>Lea los datos de ventas de productos de "facecream" y "facewash" y muéstrelos usando el gráfico de barras.</li>
+<li>Anteriormente se define un rango de valores válidos para los valores del largo y ancho de los petalos y sépalos. Agregue una columna denominada <strong>label</strong>  que identifique cuál de estos valores esta fuera del rango de valores válidos.</li>
 </ol>
 
 </div>
@@ -2144,7 +2231,7 @@ df.head()</div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
-<li>Lea todos los datos de ventas de productos y muéstrelos utilizando un gráfico box-plot.</li>
+<li>Realice un gráfico de <em>sepal_length</em> vs <em>petal_length</em> y otro de <em>sepal_width</em> vs <em>petal_width</em> categorizados por la etiqueta <strong>label</strong>. Concluya sus resultados.</li>
 </ol>
 
 </div>
@@ -2190,7 +2277,7 @@ df.head()</div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
-<li>Calcule los datos de ventas totales del año pasado para cada producto y muéstrelos usando un gráfico circular</li>
+<li>Filtre los datos válidos y realice un gráfico de <em>sepal_length</em> vs <em>petal_length</em> categorizados por la etiqueta <strong>species</strong>.</li>
 </ol>
 
 </div>

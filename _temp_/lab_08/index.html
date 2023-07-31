@@ -10,14 +10,14 @@
         <meta name="author" content="Francisco Alfaro">
       
       
-        <link rel="canonical" href="https://github.com/fralfaro/MAT281_2023/labs/lab_06/">
+        <link rel="canonical" href="https://github.com/fralfaro/MAT281_2023/_temp_/lab_08/">
       
       <link rel="icon" href="../../images/usm.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
     
     
       
-        <title>MAT281 - Laboratorios N°06 - Home</title>
+        <title>MAT281 - Laboratorio N°08 - Home</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mat281-laboratorios-n06" class="md-skip">
+        <a href="#mat281-laboratorio-n08" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MAT281 - Laboratorios N°06
+              MAT281 - Laboratorio N°08
             
           </span>
         </div>
@@ -836,6 +836,40 @@
         <li class="md-nav__item">
   <a href="#i-problema-01" class="md-nav__link">
     I.- Problema 01
+  </a>
+  
+    <nav class="md-nav" aria-label="I.- Problema 01">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-normalizar-datos" class="md-nav__link">
+    1.- Normalizar datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-realizar-ajuste-mediante-kmeans" class="md-nav__link">
+    2.- Realizar ajuste mediante kmeans
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-elegir-numero-de-cluster" class="md-nav__link">
+    3.- Elegir Número de cluster
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-problema-02" class="md-nav__link">
+    II.- Problema 02
   </a>
   
 </li>
@@ -1890,8 +1924,8 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><a href="https://colab.research.google.com/github/fralfaro/MAT281_2023/blob/main/docs/labs/lab_06.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
-<h1 id="mat281-laboratorios-n06">MAT281 - Laboratorios N&#176;06<a class="anchor-link" href="#mat281-laboratorios-n06">&#182;</a></h1>
+<p><a href="https://colab.research.google.com/github/fralfaro/MAT281_2023/blob/main/docs/labs/lab_08.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
+<h1 id="mat281-laboratorio-n08">MAT281 - Laboratorio N&#176;08<a class="anchor-link" href="#mat281-laboratorio-n08">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -1903,20 +1937,10 @@ Licensed under the Apache License, Version 2.0.
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><a id='p1'></a></p>
-<h2 id="i-problema-01">I.- Problema 01<a class="anchor-link" href="#i-problema-01">&#182;</a></h2><p><img src="https://drive.google.com/uc?export=view&id=1iLbdUKIrQByZ_yJFKOonV2VK4UL1aMvA" width = "400" align="center"/></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>El <strong>cuarteto de Anscombe</strong> comprende cuatro conjuntos de datos que tienen las mismas propiedades estadísticas, pero que evidentemente son distintas al inspeccionar sus gráficos respectivos.</p>
-<p>Cada conjunto consiste de once puntos (x, y) y fueron construidos por el estadístico F. J. Anscombe. El cuarteto es una demostración de la importancia de mirar gráficamente un conjunto de datos antes de analizarlos.</p>
+<h2 id="i-problema-01">I.- Problema 01<a class="anchor-link" href="#i-problema-01">&#182;</a></h2><p><img src="https://drive.google.com/uc?export=view&id=1ZAicRye9Ixj7jijCwNhU8Fhf6Rmjp2Z7" width = "200" align="center"/></p>
+<p>El conjunto de datos se denomina <code>vehiculos_procesado_con_grupos.csv</code>, el cual contine algunas de las características más importante de un vehículo.</p>
+<p>En este ejercicio se tiene como objetivo, es poder clasificar los distintos vehículos basados en las cracterísticas que se presentan a continuación. La dificultad de este ejercicio radíca en que ahora tenemos variables numéricas y variables categóricas.</p>
+<p>Lo primero será cargar el conjunto de datos:</p>
 
 </div>
 </div>
@@ -1946,9 +1970,10 @@ Licensed under the Apache License, Version 2.0.
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span><span class="p">,</span> <span class="n">r2_score</span>
 
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.dummy</span> <span class="kn">import</span> <span class="n">DummyClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
 
 
 <span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
@@ -1959,9 +1984,10 @@ Licensed under the Apache License, Version 2.0.
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error, r2_score
 
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.dummy import DummyClassifier
+from sklearn.cluster import KMeans
 
 
 %matplotlib inline
@@ -1996,13 +2022,35 @@ sns.set(rc={'figure.figsize':(11.7,8.27)})</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Cargar los datos del cuarteto de Anscombe</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;anscombe&quot;</span><span class="p">)</span>
-<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># cargar datos</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/fralfaro/MAT281_2022/main/labs/lab_08/data/vehiculos_procesado_con_grupos.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>\
+       <span class="o">.</span><span class="n">drop</span><span class="p">(</span>
+            <span class="p">[</span><span class="s2">&quot;fabricante&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;modelo&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;transmision&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;traccion&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;clase&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;combustible&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;consumo&quot;</span><span class="p">],</span> 
+    
+          <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
-<div id="cell-2" class="clipboard-copy-txt"># Cargar los datos del cuarteto de Anscombe
-data = sns.load_dataset("anscombe")
-data.head()</div>
+<div id="cell-2" class="clipboard-copy-txt"># cargar datos
+df = pd.read_csv("https://raw.githubusercontent.com/fralfaro/MAT281_2022/main/labs/lab_08/data/vehiculos_procesado_con_grupos.csv", sep=",")\
+       .drop(
+            ["fabricante", 
+             "modelo",
+             "transmision", 
+             "traccion", 
+             "clase", 
+             "combustible",
+             "consumo"], 
+    
+          axis=1)
+
+df.head()</div>
     
         </div>
     </div>
@@ -2018,10 +2066,12 @@ data.head()</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Basado en la información presentada responda las siguientes preguntas:</p>
-<ol>
-<li>Gráfique mediante un gráfico tipo <strong>scatter</strong> cada grupo. A simple vista, ¿ los grupos son muy distintos entre si?.</li>
+<p>En este caso, no solo se tienen datos numéricos, sino que también categóricos. Además, tenemos problemas de datos <strong>vacíos (Nan)</strong>. Así que para resolver este problema, seguiremos varios pasos:</p>
+<h3 id="1-normalizar-datos">1.- Normalizar datos<a class="anchor-link" href="#1-normalizar-datos">&#182;</a></h3><ol>
+<li>Cree un conjunto de datos con las variables numéricas, además, para cada dato vacía, rellene con el promedio asociado a esa columna. Finalmente, normalize los datos mediante el procesamiento <strong>MinMaxScaler</strong> de <strong>sklearn</strong>.</li>
 </ol>
+<p>2.-  Cree un conjunto de datos con las variables categóricas , además, transforme de variables categoricas a numericas ocupando el comando <strong>get_dummies</strong> de pandas (<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.get_dummies.html">referencia</a>). Explique a grande rasgo como se realiza la codificación de variables numéricas a categóricas.</p>
+<p>3.- Junte ambos dataset en uno, llamado <strong>df_procesado</strong>.</p>
 
 </div>
 </div>
@@ -2065,8 +2115,15 @@ data.head()</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="2-realizar-ajuste-mediante-kmeans">2.- Realizar ajuste mediante kmeans<a class="anchor-link" href="#2-realizar-ajuste-mediante-kmeans">&#182;</a></h3><p>Una vez depurado el conjunto de datos, es momento de aplicar el algoritmo de <strong>kmeans</strong>.</p>
 <ol>
-<li>Realice un resumen de las medidas estadísticas más significativas ocuapando el comando <code>describe</code> para cada grupo. Interprete.</li>
+<li>Ajuste el modelo de <strong>kmeans</strong> sobre el conjunto de datos, con un total de <strong>8 clusters</strong>.</li>
+<li>Asociar a cada individuo el correspondiente cluster y calcular valor de los centroides de cada cluster.</li>
+<li>Realizar un resumen de las principales cualidades de cada cluster. Para  esto debe calcular (para cluster) las siguientes medidas de resumen:<ul>
+<li>Valor promedio de las variables numérica</li>
+<li>Moda para las variables numericas</li>
+</ul>
+</li>
 </ol>
 
 </div>
@@ -2111,9 +2168,9 @@ data.head()</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ol>
-<li>Realice un ajuste lineal (con <strong>sklearn</strong>) y calcule los resultados de las métricas para cada grupo. Además, grafique los resultados de la regresión lineal para cada grupo. Interprete.</li>
-</ol>
+<h3 id="3-elegir-numero-de-cluster">3.- Elegir N&#250;mero de cluster<a class="anchor-link" href="#3-elegir-numero-de-cluster">&#182;</a></h3><p>Estime mediante la <strong>regla del codo</strong>, el número de cluster apropiados para el caso.
+Para efectos prácticos, eliga la siguiente secuencia como número de clusters a comparar:</p>
+$$[5, 10, 20, 30, 50, 75, 100, 200, 300]$$<p>Una vez realizado el gráfico, saque sus propias conclusiones del caso.</p>
 
 </div>
 </div>
@@ -2157,9 +2214,20 @@ data.head()</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ol>
-<li>Es claro que el ajuste lineal para algunos grupos no es el correcto. Existen varias formas de solucionar este problema (eliminar outliers, otros modelos, etc.). Identifique una estrategia para que el modelo de regresión lineal ajuste de mejor manera e implemente otros modelos en los casos que encuentre necesario.  </li>
-</ol>
+<p>Al observar el gráfico resultante, se pueden obtener conclusiones sobre el número apropiado de clusters. La regla del codo sugiere elegir el número de clusters donde la reducción en la inercia se estabiliza significativamente. En otras palabras, se busca el punto en el gráfico donde la curva de inercia comienza a aplanarse o forma un codo.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="ii-problema-02">II.- Problema 02<a class="anchor-link" href="#ii-problema-02">&#182;</a></h2><p><img src="https://live.staticflickr.com/7866/47075467621_85ab810139_c.jpg" align="center"/></p>
+<p>Para el conjunto de datos de <strong>Iris</strong>, se pide realizar una reducción de dimensionalidad ocupando las técnicas de PCA y TSNE (vistas en clases).</p>
 
 </div>
 </div>
@@ -2185,9 +2253,124 @@ data.head()</div>
                 </div>
             </clipboard-copy>
         </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="kn">from</span> <span class="nn">sklearn.manifold</span> <span class="kn">import</span> <span class="n">TSNE</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">ListedColormap</span>
+<span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="kn">import</span> <span class="n">Axes3D</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
+<div id="cell-6" class="clipboard-copy-txt">import pandas as pd
+from sklearn.datasets import load_iris
+from sklearn.decomposition import PCA
+from sklearn.manifold import TSNE
+
+import matplotlib.pyplot as plt
+from matplotlib.colors import ListedColormap
+from mpl_toolkits.mplot3d import Axes3D
+import seaborn as sns</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-7">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+
+<span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sepal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;sepal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_width&#39;</span><span class="p">]</span>
+<span class="n">target</span> <span class="o">=</span> <span class="s1">&#39;species&#39;</span>
+<span class="n">iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">dataset</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
+    <span class="n">columns</span><span class="o">=</span><span class="n">features</span><span class="p">)</span>
+
+<span class="n">iris</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">target</span>
+<span class="n">iris</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+<div id="cell-7" class="clipboard-copy-txt">dataset = load_iris()
+
+features = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width']
+target = 'species'
+iris = pd.DataFrame(
+    dataset.data,
+    columns=features)
+
+iris['species'] = dataset.target
+iris.head()</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>El objetivo es aplicar ambos algoritmos de la siguiente manera:</p>
+<ul>
+<li>Análisis detallado algoritma PCA (tablas, gráficos, etc.)</li>
+<li>Análisis detallado algoritma TSNE (tablas, gráficos, etc.)</li>
+<li>Comparar ambos algoritmos (conclusiones del caso)</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-8">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># FIXME</span>
 </pre></div>
-<div id="cell-6" class="clipboard-copy-txt"># FIXME</div>
+<div id="cell-8" class="clipboard-copy-txt"># FIXME</div>
     
         </div>
     </div>
