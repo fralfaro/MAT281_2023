@@ -68,7 +68,7 @@ La solución debe alojarse en su **Portafolio Personal** del curso (`.ipynb`).
 
 ## Información Importante
 
-* **Plazo**: XX de Diciembre del 20XX (hasta las 11:59 PM) 
+* **Plazo**: 01 de Diciembre del 2023 (hasta las 11:59 PM) 
 * Esto corresponde a un desafio de Kaggle ([link](https://www.kaggle.com/competitions/spaceship-titanic/)).
 * La información respecto a los datos, lo pueden encontrar en el siguiente [link](https://www.kaggle.com/competitions/spaceship-titanic/data).
 * A modo de inspiración, pueden ocupar algunos gráficos de otros participantes del desafío ([link](https://www.kaggle.com/competitions/spaceship-titanic/code)).
