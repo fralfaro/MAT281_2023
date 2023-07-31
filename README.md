@@ -12,7 +12,7 @@
 * **Sigla**: MAT281
 * **Prerrequisitos**: Ninguno
 * **Unidad Académica que lo imparte**: Deparatamento de matemáticas
-* **Eje formativo** :Ingeniería Aplicada e Integración
+* **Eje formativo**: Ingeniería Aplicada e Integración
 
 ## Descripción de la Asignatura
 
