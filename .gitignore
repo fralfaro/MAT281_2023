@@ -72,9 +72,4 @@ target/
 *ipynb_checkpoints
 public
 site
-duoc
-learnplatform-covid19-impact-on-digital-learning
-coding_dojo
-labs/labs
-labs/ejercicios
-docs/_temp_
+/docs/__temp__/
