@@ -1,9 +1,9 @@
 # MAT281 - Aplicaciones de la Matemática en la Ingeniería
 
-![example workflow](https://github.com/fralfaro/MAT281_20XX/actions/workflows/documentation.yml/badge.svg)
-<a href="https://fralfaro.github.io/MAT281_20XX/"><img alt="Link a la Documentación" src="https://img.shields.io/badge/docs-link-brightgreen"></a>
-<a href=""><img alt="Link a la Documentación" src="https://img.shields.io/badge/clases-link-brightgreen"></a>
-<a href=""><img alt="Link a la Documentación" src="https://img.shields.io/badge/notas-link-brightgreen"></a>
+![example workflow](https://github.com/fralfaro/MAT281_2023/actions/workflows/documentation.yml/badge.svg)
+<a href="https://fralfaro.github.io/MAT281_2023/"><img alt="Link a la Documentación" src="https://img.shields.io/badge/docs-link-brightgreen"></a>
+<a href="https://drive.google.com/drive/folders/1_Gv93mxABPmKu5_85-eZ7lZGwkS1XYJL?usp=sharing"><img alt="Link a la Documentación" src="https://img.shields.io/badge/clases-link-brightgreen"></a>
+<a href="https://docs.google.com/spreadsheets/d/1bBvqdpvmcKs-lT4pX33S5ouOLeAQBVQe/edit?usp=sharing&ouid=101387375267916178365&rtpof=true&sd=true"><img alt="Link a la Documentación" src="https://img.shields.io/badge/notas-link-brightgreen"></a>
 
 
 ## Identificación de la asignatura
@@ -57,15 +57,15 @@ El estudiante adquiere competencias/destrezas básicas como Data Scientist (ocup
 - Mensual.
 - Individual.
 - Plazo:
-  - $T_1$: XX de Octubre 20XX.
-  - $T_2$: XX de Diciembre 20XX.
+  - $T_1$: 14 de Septiembre 2023.
+  - $T_2$: 30 de Noviembre 2023.
 - Entregas fuera del plazo descuentan 25 puntos por día (parte entera). 
     - Por ejemplo, un retraso de 15 minutos cuenta como un día y descuenta 25 puntos.  
       
 
 ### Proyecto 
 - Semestral.
-- Plazo: final del curso (XX de Diciembre 20XX).
+- Plazo: final del curso (01 de Diciembre 2023).
 - Individual.
 - Entregas fuera del plazo descuentan 25 puntos por día (parte entera).  
 
