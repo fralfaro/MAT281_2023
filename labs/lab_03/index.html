@@ -1910,6 +1910,8 @@ Licensed under the Apache License, Version 2.0.
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Esta semana revisaremos datos del <strong>Índice de Libertad de Prensa</strong> que confecciona cada año la asociación de Reporteros Sin Fronteras.</p>
+<blockquote><p><strong>Nota</strong>: Los datos se encuentran en el siguiente <a href="https://drive.google.com/drive/folders/1zxiYb5ji_xa5_5tWxvdjCEGYRY9YvjR7?usp=drive_link">link</a>.</p>
+</blockquote>
 <h2 id="diccionario-de-datos">Diccionario de datos<a class="anchor-link" href="#diccionario-de-datos">&#182;</a></h2><table>
 <thead><tr>
 <th style="text-align:left">Variable</th>
@@ -1976,13 +1978,47 @@ Licensed under the Apache License, Version 2.0.
                 </div>
             </clipboard-copy>
         </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+<div id="cell-1" class="clipboard-copy-txt">from google.colab import drive
+drive.mount('/content/drive')</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-2">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">listdir</span>
 <span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">isfile</span><span class="p">,</span> <span class="n">join</span>
 </pre></div>
-<div id="cell-1" class="clipboard-copy-txt">import numpy as np 
+<div id="cell-2" class="clipboard-copy-txt">import numpy as np 
 import pandas as pd
 
 from os import listdir
@@ -2001,12 +2037,12 @@ from os.path import isfile, join</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-2">
+            <clipboard-copy for="cell-3">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2021,7 +2057,7 @@ from os.path import isfile, join</div>
 <span class="n">archivos_anio</span> <span class="o">=</span> <span class="p">[</span><span class="n">path</span> <span class="o">+</span> <span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">if</span> <span class="s1">&#39;libertad_prensa_codigo&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">f</span> <span class="p">]</span> 
 <span class="n">df_codigos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;libertad_prensa_codigo.csv&#39;</span><span class="p">)</span>
 </pre></div>
-<div id="cell-2" class="clipboard-copy-txt">path = "data/"
+<div id="cell-3" class="clipboard-copy-txt">path = "data/"
 
 archivos_anio = [path + f for f in listdir(path) if 'libertad_prensa_codigo' not in f ] 
 df_codigos = pd.read_csv(path + 'libertad_prensa_codigo.csv')</div>
@@ -2067,7 +2103,7 @@ df_codigos = pd.read_csv(path + 'libertad_prensa_codigo.csv')</div>
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-3">
+            <clipboard-copy for="cell-4">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2079,7 +2115,7 @@ df_codigos = pd.read_csv(path + 'libertad_prensa_codigo.csv')</div>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># FIXME</span>
 </pre></div>
-<div id="cell-3" class="clipboard-copy-txt"># FIXME</div>
+<div id="cell-4" class="clipboard-copy-txt"># FIXME</div>
     
         </div>
     </div>
@@ -2120,7 +2156,7 @@ df_codigos = pd.read_csv(path + 'libertad_prensa_codigo.csv')</div>
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-4">
+            <clipboard-copy for="cell-5">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2132,7 +2168,7 @@ df_codigos = pd.read_csv(path + 'libertad_prensa_codigo.csv')</div>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># FIXME</span>
 </pre></div>
-<div id="cell-4" class="clipboard-copy-txt"># FIXME</div>
+<div id="cell-5" class="clipboard-copy-txt"># FIXME</div>
     
         </div>
     </div>
@@ -2166,7 +2202,7 @@ df_codigos = pd.read_csv(path + 'libertad_prensa_codigo.csv')</div>
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-5">
+            <clipboard-copy for="cell-6">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2191,7 +2227,7 @@ df_codigos = pd.read_csv(path + 'libertad_prensa_codigo.csv')</div>
     
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
-<div id="cell-5" class="clipboard-copy-txt"># respuesta
+<div id="cell-6" class="clipboard-copy-txt"># respuesta
 
 def resumen_df(df):
     """
@@ -2224,7 +2260,7 @@ def resumen_df(df):
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-6">
+            <clipboard-copy for="cell-7">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2237,7 +2273,7 @@ def resumen_df(df):
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># retornar </span>
 <span class="n">resumen_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
-<div id="cell-6" class="clipboard-copy-txt"># retornar 
+<div id="cell-7" class="clipboard-copy-txt"># retornar 
 resumen_df(df)</div>
     
         </div>
@@ -2277,7 +2313,7 @@ resumen_df(df)</div>
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-7">
+            <clipboard-copy for="cell-8">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2296,7 +2332,7 @@ resumen_df(df)</div>
 
 <span class="n">df_america</span> <span class="o">=</span> <span class="c1"># FIX ME</span>
 </pre></div>
-<div id="cell-7" class="clipboard-copy-txt"># respuesta
+<div id="cell-8" class="clipboard-copy-txt"># respuesta
 
 america = ['ARG', 'ATG', 'BLZ', 'BOL', 'BRA', 'CAN', 'CHL', 'COL', 'CRI',
        'CUB', 'DOM', 'ECU', 'GRD', 'GTM', 'GUY', 'HND', 'HTI', 'JAM',
@@ -2341,7 +2377,7 @@ df_america = # FIX ME</div>
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-8">
+            <clipboard-copy for="cell-9">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2353,7 +2389,7 @@ df_america = # FIX ME</div>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># FIX ME</span>
 </pre></div>
-<div id="cell-8" class="clipboard-copy-txt"># FIX ME</div>
+<div id="cell-9" class="clipboard-copy-txt"># FIX ME</div>
     
         </div>
     </div>
