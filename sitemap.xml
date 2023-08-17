@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://github.com/fralfaro/MAT281_2023/labs/lab_031/</loc>
+         <lastmod>2023-08-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://github.com/fralfaro/MAT281_2023/lectures/basic_tools/bt_01/</loc>
          <lastmod>2023-08-17</lastmod>
          <changefreq>daily</changefreq>
