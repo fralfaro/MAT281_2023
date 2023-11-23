@@ -58,14 +58,14 @@ El estudiante adquiere competencias/destrezas básicas como Data Scientist (ocup
 - Individual.
 - Plazo:
   - $T_1$: 14 de Septiembre 2023.
-  - $T_2$: 30 de Noviembre 2023.
+  - $T_2$: 04 de Diciembre 2023.
 - Entregas fuera del plazo descuentan 25 puntos por día (parte entera). 
     - Por ejemplo, un retraso de 15 minutos cuenta como un día y descuenta 25 puntos.  
       
 
 ### Proyecto 
 - Semestral.
-- Plazo: final del curso (01 de Diciembre 2023).
+- Plazo: final del curso (04 de Diciembre 2023).
 - Individual.
 - Entregas fuera del plazo descuentan 25 puntos por día (parte entera).  
 
